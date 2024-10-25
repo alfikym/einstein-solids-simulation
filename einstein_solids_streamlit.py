@@ -3,8 +3,13 @@ import matplotlib.pyplot as plt
 from math import comb
 import streamlit as st
 
-# Function to calculate multiplicity
 def multiplicity(q, N):
+    """
+    Calculate the multiplicity of an Einstein solid.
+    Arguments:
+    q -- number of energy quanta
+    N -- number of oscillators
+    """
     if q < 0 or N <= 0:
         raise ValueError("Number of quanta must be non-negative and number of oscillators must be positive.")
     return comb(q + N - 1, q)
